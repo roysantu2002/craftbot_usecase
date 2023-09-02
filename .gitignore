@@ -1,0 +1,20 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore database files
+db.sqlite3
+
+# Ignore development and local settings files
+settings/local.py
+settings/development.py
+settings/production.py
+settings/staging.py
+
+# Ignore media files (uploaded user content)
+media/
+
+# Ignore static files (collectstatic)
+static/
+
+# Ignore virtual environment directory (if you're using virtualenv)
+env/
