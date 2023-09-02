@@ -18,3 +18,5 @@ static/
 
 # Ignore virtual environment directory (if you're using virtualenv)
 env/
+.env.dev
+.env.prod
