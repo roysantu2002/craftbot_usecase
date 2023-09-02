@@ -19,4 +19,4 @@ class NetworkDeviceLog(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Log for {self.device.host_name} ({self.device.ip_address})":
+        return f"Log for {self.device.host_name} ({self.device.ip_address})"
