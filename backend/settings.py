@@ -66,6 +66,22 @@ TEMPLATES = [
     },
 ]
 
+
+#DRF
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ],
+}
+
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
+    'TITLE': 'ibots api',
+    'DESCRIPTION': 'Your project description',
+    'VERSION': '1.0.0',
+}
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 

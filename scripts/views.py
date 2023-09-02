@@ -9,14 +9,12 @@ from .serializers import NetworkDeviceInfoSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 
 class NetworkDeviceInfoCreateAPIView(APIView):
+    serializer_class = NetworkDeviceInfoSerializer
     def post(self, request, format=None):
         serializer = NetworkDeviceInfoSerializer(data=request.data)
-
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class NetworkDeviceInfoListView(ListAPIView):
