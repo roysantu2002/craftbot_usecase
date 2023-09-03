@@ -8,6 +8,19 @@ from .models import NetworkDeviceInfo, NetworkDeviceLog
 from .serializers import NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import generics
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
+
+class ExecuteScriptView(APIView):
+    def post(self, request, script_room):
+        message = {
+            'type': 'execute_script',
+            'script_room': script_room,
+        }
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.send)('scripts', message)
+        return Response({'message': 'Script execution initiated'}, status=status.HTTP_202_ACCEPTED)
+
 
 class NetworkDeviceLogCreateAPIView(APIView):
     serializer_class = NetworkDeviceLogSerializer

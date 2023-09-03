@@ -84,7 +84,23 @@ SPECTACULAR_SETTINGS = {
 }
 WSGI_APPLICATION = 'backend.wsgi.application'
 
+#redis channel
+# Read Redis configuration from the environment file
+REDIS_HOST = config('REDIS_HOST', default='localhost')
+REDIS_PORT = config('REDIS_PORT', default=6379, cast=int)
+REDIS_DB = config('REDIS_DB', default=0, cast=int)
 
+# Use the configured Redis settings for Channels
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [(REDIS_HOST, REDIS_PORT)],
+        },
+    },
+}
+
+#Database
 if DEBUG:
     print(config('DB_HOST'))
     DATABASES = {
