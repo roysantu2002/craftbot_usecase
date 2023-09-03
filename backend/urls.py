@@ -8,11 +8,8 @@ from django.urls import path
 from django.urls import path, re_path, include
 # Import your WebSocket consumers
 from scripts.consumers import ScriptConsumer
+from channels.routing import ProtocolTypeRouter, URLRouter
 
-
-websocket_urlpatterns = [
-    re_path(r'ws/scripts/(?P<script_room>\w+)/$', ScriptConsumer.as_asgi()),
-]
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -5,14 +5,35 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import NetworkDeviceInfo, NetworkDeviceLog
-from .serializers import NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
+from .serializers import ExecuteScriptSerializer, NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import generics
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 class ExecuteScriptView(APIView):
-    def post(self, request, script_room):
+    serializer_class = ExecuteScriptSerializer
+
+    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter(
+                'script_room',
+                openapi.IN_QUERY,
+                description='The room for script execution',
+                type=openapi.TYPE_STRING,
+            ),
+        ],
+        request_body=ExecuteScriptSerializer,  # Use the serializer class
+    )
+    def post(self, request):
+        serializer = ExecuteScriptSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        script_room = serializer.validated_data['script_room']
+
         message = {
             'type': 'execute_script',
             'script_room': script_room,
@@ -21,6 +42,16 @@ class ExecuteScriptView(APIView):
         async_to_sync(channel_layer.send)('scripts', message)
         return Response({'message': 'Script execution initiated'}, status=status.HTTP_202_ACCEPTED)
 
+
+#class ExecuteScriptView(APIView):
+#    def post(self, request, script_room):
+#        message = {
+#            'type': 'execute_script',
+#            'script_room': script_room,
+#        }
+#        channel_layer = get_channel_layer()
+#        async_to_sync(channel_layer.send)('scripts', message)
+#        return Response({'message': 'Script execution initiated'}, status=status.HTTP_202_ACCEPTED)
 
 class NetworkDeviceLogCreateAPIView(APIView):
     serializer_class = NetworkDeviceLogSerializer

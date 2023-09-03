@@ -1,6 +1,9 @@
 from rest_framework import serializers
 from .models import NetworkDeviceInfo, NetworkDeviceLog
 
+class ExecuteScriptSerializer(serializers.Serializer):
+    script_room = serializers.CharField()
+
 class NetworkDeviceInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = NetworkDeviceInfo
