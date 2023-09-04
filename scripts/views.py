@@ -43,6 +43,30 @@ class ExecuteScriptView(APIView):
         return Response({'message': 'Script execution initiated'}, status=status.HTTP_202_ACCEPTED)
 
 
+class NetworkDeviceLogCreateAPIView(APIView):
+    serializer_class = NetworkDeviceLogSerializer
+
+    def post(self, request, format=None):
+        # Get the device_ip from request.data
+        device_ip = request.data.get('device_ip')
+        print(request.data)
+        # Retrieve the device object using the device_ip
+        try:
+            device = NetworkDeviceInfo.objects.get(ip_address=device_ip)
+        except Device.DoesNotExist:
+            return Response({"error": f"Device with IP {device_ip} does not exist."}, status=status.HTTP_404_NOT_FOUND)
+
+        # Add the device to the request data
+        request.data['device'] = device.id
+
+        # Serialize the data with the updated request data
+        serializer = NetworkDeviceLogSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 #class ExecuteScriptView(APIView):
 #    def post(self, request, script_room):
 #        message = {
@@ -53,14 +77,14 @@ class ExecuteScriptView(APIView):
 #        async_to_sync(channel_layer.send)('scripts', message)
 #        return Response({'message': 'Script execution initiated'}, status=status.HTTP_202_ACCEPTED)
 
-class NetworkDeviceLogCreateAPIView(APIView):
-    serializer_class = NetworkDeviceLogSerializer
-    def post(self, request, format=None):
-        serializer = NetworkDeviceLogSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#class NetworkDeviceLogCreateAPIView(APIView):
+#    serializer_class = NetworkDeviceLogSerializer
+#    def post(self, request, format=None):
+#        serializer = NetworkDeviceLogSerializer(data=request.data)
+#        if serializer.is_valid():
+#            serializer.save()
+#            return Response(serializer.data, status=status.HTTP_201_CREATED)
+#        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class NetworkDeviceLogListCreateAPIView(generics.ListCreateAPIView):
     queryset = NetworkDeviceLog.objects.all()
