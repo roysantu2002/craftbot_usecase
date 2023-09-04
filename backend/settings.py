@@ -20,7 +20,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 print(DEBUG)
 SECRET_KEY = config('SECRET_KEY')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','*', '192.168.1.101']
 
 
 # Application definition
@@ -35,12 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+     'corsheaders',
     'drf_spectacular',
     'scripts'
 	
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -142,6 +144,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'http://192.168.1.101:3000']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

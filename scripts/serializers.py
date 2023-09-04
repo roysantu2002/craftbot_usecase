@@ -7,7 +7,7 @@ class ExecuteScriptSerializer(serializers.Serializer):
 class NetworkDeviceInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = NetworkDeviceInfo
-        fields = ('id', 'ip_address', 'host_name', 'info')
+        fields = ('id', 'status', 'ip_address', 'host_name', 'info')
 
 class NetworkDeviceLogSerializer(serializers.ModelSerializer):
     class Meta:

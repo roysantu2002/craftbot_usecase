@@ -7,6 +7,7 @@ from django.db import models
 class NetworkDeviceInfo(models.Model):
     ip_address = models.GenericIPAddressField(unique=True)
     host_name = models.CharField(max_length=255)
+    status = models.BooleanField(default=True)
     info = models.TextField()
 
     def __str__(self):
