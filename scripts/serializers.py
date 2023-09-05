@@ -1,5 +1,10 @@
 from rest_framework import serializers
-from .models import NetworkDeviceInfo, NetworkDeviceLog
+from .models import NetworkDeviceInfo, NetworkDeviceLog, ScriptInfo
+
+class ScriptInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ScriptInfo
+        fields = '__all__'
 
 class ExecuteScriptSerializer(serializers.Serializer):
     script_room = serializers.CharField()

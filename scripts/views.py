@@ -5,13 +5,28 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import NetworkDeviceInfo, NetworkDeviceLog
-from .serializers import ExecuteScriptSerializer, NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
+from .serializers import ScriptInfoSerializer, ExecuteScriptSerializer, NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import generics
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
+
+
+class ScriptInfoCreateAPIView(APIView):
+    serializer_class = ScriptInfoSerializer
+    def post(self, request, format=None):
+        serializer = ScriptInfoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ScriptInfoListView(generics.ListAPIView):
+    queryset = ScriptInfo.objects.all()
+    serializer_class = ScriptInfoSerializer
 
 class ExecuteScriptView(APIView):
     serializer_class = ExecuteScriptSerializer

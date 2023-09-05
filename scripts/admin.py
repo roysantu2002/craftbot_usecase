@@ -1,6 +1,11 @@
 
 from django.contrib import admin
-from .models import NetworkDeviceInfo, NetworkDeviceLog
+from .models import NetworkDeviceInfo, NetworkDeviceLog, ScriptInfo
+
+@admin.register(ScriptInfo)
+class NetworkDeviceInfoAdmin(admin.ModelAdmin):
+    list_display = ('name')
+
 
 @admin.register(NetworkDeviceInfo)
 class NetworkDeviceInfoAdmin(admin.ModelAdmin):
