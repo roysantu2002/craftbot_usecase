@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import NetworkDeviceInfo, NetworkDeviceLog
+from .models import ScriptInfo, NetworkDeviceInfo, NetworkDeviceLog
 from .serializers import ScriptInfoSerializer, ExecuteScriptSerializer, NetworkDeviceInfoSerializer, NetworkDeviceLogSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import generics
