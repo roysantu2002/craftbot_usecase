@@ -14,7 +14,7 @@ from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
 
-class ScriptInfoCreateAPIView(APIView):
+class ScriptInfoCreateView(APIView):
     serializer_class = ScriptInfoSerializer
     def post(self, request, format=None):
         serializer = ScriptInfoSerializer(data=request.data)
