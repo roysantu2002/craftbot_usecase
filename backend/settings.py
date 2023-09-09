@@ -82,7 +82,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_REQUEST': True,
-    'TITLE': 'ibots api',
+    'TITLE': 'Netgeni',
     'DESCRIPTION': 'Your project description',
     'VERSION': '1.0.0',
 }

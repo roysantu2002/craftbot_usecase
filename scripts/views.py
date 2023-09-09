@@ -12,6 +12,21 @@ from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
+from .serializers import NetworkKeywordSerializer
+from .models import NetworkKeyword
+
+class NetworkKeywordCreateView(APIView):
+    serializer_class = NetworkKeywordSerializer
+    def post(self, request, format=None):
+        # Deserialize the request data using the serializer
+        serializer = NetworkKeywordSerializer(data=request.data, many=True)
+        
+        if serializer.is_valid():
+            # Save the deserialized data to create multiple instances
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ScriptInfoCreateView(APIView):
@@ -27,6 +42,10 @@ class ScriptInfoCreateView(APIView):
 class ScriptInfoListView(generics.ListAPIView):
     queryset = ScriptInfo.objects.all()
     serializer_class = ScriptInfoSerializer
+
+class KeywordsListView(generics.ListAPIView):
+    queryset = NetworkKeyword.objects.all()
+    serializer_class = NetworkKeywordSerializer
 
 class ExecuteScriptView(APIView):
     serializer_class = ExecuteScriptSerializer
@@ -64,6 +83,7 @@ class NetworkDeviceLogCreateAPIView(APIView):
     def post(self, request, format=None):
         # Get the device_ip from request.data
         device_ip = request.data.get('device_ip')
+        print(device_ip)
         print(request.data)
         # Retrieve the device object using the device_ip
         try:

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import NetworkDeviceInfo, NetworkDeviceLog, ScriptInfo
+from .models import NetworkDeviceInfo, NetworkDeviceLog, ScriptInfo, NetworkKeyword
 
 class ScriptInfoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,8 +19,13 @@ class NetworkDeviceLogSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NetworkDeviceLog
-        fields = ['device_id', 'device_ip', 'log_data', 'created_at']
+        fields = ['device', 'device_ip', 'log_data', 'created_at']
 #class NetworkDeviceLogSerializer(serializers.ModelSerializer):
 #    class Meta:
 #        model = NetworkDeviceLog
 #        fields = '__all__'
+
+class NetworkKeywordSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NetworkKeyword
+        fields = '__all__'

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ScriptInfoListView, ScriptInfoCreateView, ExecuteScriptView,  NetworkDeviceLogListCreateAPIView, NetworkDeviceLogRetrieveAPIView, NetworkDeviceInfoCreateAPIView, NetworkDeviceInfoListView, NetworkDeviceInfoDetailView, NetworkDeviceLogCreateAPIView
+from .views import KeywordsListView, NetworkKeywordCreateView, ScriptInfoListView, ScriptInfoCreateView, ExecuteScriptView,  NetworkDeviceLogListCreateAPIView, NetworkDeviceLogRetrieveAPIView, NetworkDeviceInfoCreateAPIView, NetworkDeviceInfoListView, NetworkDeviceInfoDetailView, NetworkDeviceLogCreateAPIView
 
 urlpatterns = [
     path('network-devices/', NetworkDeviceInfoCreateAPIView.as_view(), name='network-device-create'),
@@ -11,6 +11,8 @@ urlpatterns = [
     path('execute/', ExecuteScriptView.as_view(), name='execute-script'),
     path('script-list/', ScriptInfoListView.as_view(), name='script-list'),
     path('create-script/', ScriptInfoCreateView.as_view(), name='script-create'),
+    path('script-info/', NetworkKeywordCreateView.as_view(), name='script-info'),
+    path('keyword-lists/', KeywordsListView.as_view(), name='keyword-lists'),
 
 ]
 

@@ -1,0 +1,93 @@
+[
+    {
+      "keyword": "Backup",
+      "category": "Data Management",
+      "level": "L1",
+      "script_info": 1
+    },
+    {
+      "keyword": "Log Analysis",
+      "category": "Monitoring",
+      "level": "L2",
+      "script_info": 2
+    },
+    {
+      "keyword": "Data Cleanup",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 3
+    },
+    {
+      "keyword": "Email",
+      "category": "Communication",
+      "level": "L1",
+      "script_info": 4
+    },
+    {
+      "keyword": "Report Generation",
+      "category": "Reporting",
+      "level": "L2",
+      "script_info": 5
+    },
+    {
+      "keyword": "Server Monitoring",
+      "category": "Monitoring",
+      "level": "L2",
+      "script_info": 6
+    },
+    {
+      "keyword": "Data Import",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 7
+    },
+    {
+      "keyword": "Authentication",
+      "category": "Security",
+      "level": "L1",
+      "script_info": 8
+    },
+    {
+      "keyword": "Data Export",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 9
+    },
+    {
+      "keyword": "File Archiving",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 10
+    },
+    {
+      "keyword": "Task Scheduling",
+      "category": "Automation",
+      "level": "L2",
+      "script_info": 11
+    },
+    {
+      "keyword": "Database Backup",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 12
+    },
+    {
+      "keyword": "Security Scanning",
+      "category": "Security",
+      "level": "L2",
+      "script_info": 13
+    },
+    {
+      "keyword": "Data Transformation",
+      "category": "Data Management",
+      "level": "L2",
+      "script_info": 14
+    },
+    {
+      "keyword": "File Monitoring",
+      "category": "Monitoring",
+      "level": "L2",
+      "script_info": 15
+    }
+  ]
+  
