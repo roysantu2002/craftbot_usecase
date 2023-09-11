@@ -6,6 +6,9 @@ import redis
 from django.conf import settings
 from channels.db import database_sync_to_async
 import asyncio
+from apibot import get_reponse
+
+
 
 class ScriptConsumer(AsyncWebsocketConsumer):
     async def connect(self):

@@ -94,6 +94,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 REDIS_HOST = config('REDIS_HOST', default='localhost')
 REDIS_PORT = config('REDIS_PORT', default=6379, cast=int)
 REDIS_DB = config('REDIS_DB', default=0, cast=int)
+OPEN_AI_KEY = config('OPEN_AI_KEY')
 
 # Use the configured Redis settings for Channels
 CHANNEL_LAYERS = {

@@ -1,0 +1,194 @@
+{
+  "keywords": [
+    {
+      "id": 1,
+      "keyword": "Backup",
+      "category": "Data Management"
+    },
+    {
+      "id": 2,
+      "keyword": "Log Analysis",
+      "category": "Monitoring"
+    },
+    {
+      "id": 3,
+      "keyword": "Data Cleanup",
+      "category": "Data Management"
+    },
+    {
+      "id": 4,
+      "keyword": "Email",
+      "category": "Communication"
+    },
+    {
+      "id": 5,
+      "keyword": "Report Generation",
+      "category": "Reporting"
+    },
+    {
+      "id": 6,
+      "keyword": "Server Monitoring",
+      "category": "Monitoring"
+    },
+    {
+      "id": 7,
+      "keyword": "Data Import",
+      "category": "Data Management"
+    },
+    {
+      "id": 8,
+      "keyword": "Authentication",
+      "category": "Security"
+    },
+    {
+      "id": 9,
+      "keyword": "Data Export",
+      "category": "Data Management"
+    },
+    {
+      "id": 10,
+      "keyword": "File Archiving",
+      "category": "Data Management"
+    },
+    {
+      "keyword": "\"{\\\"message\\\":\\\"Hello\\\"}\"",
+      "category": "Hello"
+    },
+    {
+      "keyword": "\"{\\\"message\\\":\\\"Hi there\\\"}\"",
+      "category": "Hi there"
+    },
+    {
+      "keyword": "\"{\\\"message\\\":\\\"hello\\\"}\"",
+      "category": "hello"
+    },
+    {
+      "keyword": "Hello",
+      "category": "Hello"
+    },
+    {
+      "keyword": "Hi",
+      "category": "Hi"
+    },
+    {
+      "keyword": "How are you doing",
+      "category": "How are you doing"
+    },
+    {
+      "keyword": "backup scripts",
+      "category": "backup scripts"
+    },
+    {
+      "keyword": "Text",
+      "category": "Text"
+    },
+    {
+      "keyword": "network",
+      "category": "network"
+    },
+    {
+      "keyword": "management",
+      "category": "management"
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "",
+      "category": ""
+    },
+    {
+      "keyword": "test",
+      "category": "test"
+    },
+    {
+      "keyword": "do you have database script",
+      "category": "do you have database script"
+    },
+    {
+      "keyword": "database",
+      "category": "database"
+    },
+    {
+      "keyword": "python",
+      "category": "python"
+    },
+    {
+      "keyword": "ansible",
+      "category": "ansible"
+    },
+    {
+      "keyword": "ansible scripting",
+      "category": "ansible scripting"
+    },
+    {
+      "keyword": "java",
+      "category": "java"
+    },
+    {
+      "keyword": "blockchain",
+      "category": "blockchain"
+    },
+    {
+      "keyword": "how about network scripts",
+      "category": "how about network scripts"
+    },
+    {
+      "keyword": "unix",
+      "category": "unix"
+    },
+    {
+      "keyword": "do you now ai",
+      "category": "do you now ai"
+    },
+    {
+      "keyword": "mongodb",
+      "category": "mongodb"
+    },
+    {
+      "keyword": "python command for disk space",
+      "category": "python command for disk space"
+    },
+    {
+      "keyword": "How to check cpu usage",
+      "category": "You can use the psutil library to check the CPU usage of your Python program."
+    },
+    {
+      "keyword": "do you understand python coding",
+      "category": "Yes, I understand Python coding."
+    },
+    {
+      "keyword": "give me a command to check cpu usage using paramiko",
+      "category": "The command to check CPU usage using Paramiko is \"top -n 1 | grep Cpu:\"."
+    },
+    {
+      "keyword": "how to print Hello World in Python",
+      "category": "To print \"Hello World\" in Python, you can use the print() function like this: print(\"Hello World\")"
+    },
+    {
+      "keyword": "how to find interfaces usage using paramiko give me a command",
+      "category": "You can use the Paramiko exec_command() method to find the interface usage. The command you can use is \"netstat -i\"."
+    },
+    {
+      "keyword": "give me a basic python commands",
+      "category": "\nAI:Some basic Python commands include print(), input(), set(), len(), for loop, if-else statements, and while loop."
+    }
+  ]
+}

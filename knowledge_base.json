@@ -1,0 +1,58 @@
+{
+  "keywords": [
+    {
+      "id": 1,
+      "keyword": "Backup",
+      "category": "Data Management"
+    },
+    {
+      "id": 2,
+      "keyword": "Log Analysis",
+      "category": "Monitoring"
+    },
+    {
+      "id": 3,
+      "keyword": "Data Cleanup",
+      "category": "Data Management"
+    },
+    {
+      "id": 4,
+      "keyword": "Email",
+      "category": "Communication"
+    },
+    {
+      "id": 5,
+      "keyword": "Report Generation",
+      "category": "Reporting"
+    },
+    {
+      "id": 6,
+      "keyword": "Server Monitoring",
+      "category": "Monitoring"
+    },
+    {
+      "id": 7,
+      "keyword": "Data Import",
+      "category": "Data Management"
+    },
+    {
+      "id": 8,
+      "keyword": "Authentication",
+      "category": "Security"
+    },
+    {
+      "id": 9,
+      "keyword": "Data Export",
+      "category": "Data Management"
+    },
+    {
+      "id": 10,
+      "keyword": "File Archiving",
+      "category": "Data Management"
+    },
+    {
+      "keyword": "{\"message\":\"do you have scripts\"}",
+      "category": "do you have scripts"
+    }
+  ]
+}

@@ -27,6 +27,7 @@ class ScriptInfo(models.Model):
     execution_frequency = models.CharField(max_length=50, blank=True)  # How often the script runs
     level = models.CharField(max_length=20, choices=SUPPORT_CHOICES, default='L1')
     info = models.TextField()
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
