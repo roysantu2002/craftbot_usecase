@@ -102,6 +102,7 @@ class ScriptConsumer(AsyncWebsocketConsumer):
                 
         # Get the channel name from the URL path, e.g., /ws/run_script/ or /ws/other_channel/
         channel_name = self.scope['url_route']['kwargs']['channel_name']
+        print('line105')
         print(channel_name)
       
         # Join the specified room (channel)
@@ -130,9 +131,9 @@ class ScriptConsumer(AsyncWebsocketConsumer):
             },
         )
 
-        await self.send(json.dumps({
-            "message": "Wait let me check",
-        }))
+        # await self.send(json.dumps({
+        #     "message": "Wait let me check",
+        # }))
       
     
         
@@ -163,17 +164,17 @@ class ScriptConsumer(AsyncWebsocketConsumer):
 
         if best_match:
                answer: str = get_best_possible_answer(best_match, knowledge_data)
-               await self.send_script_name(f'NetGeni: {answer}')
+               await self.send_script_name(f'AI: {answer}')
             #    print(f'NetGeni: {answer}')
         else:
             prompt_list: list[str] = ['You be become a Python developer that you would respond with "Yes"',
-                '\nHuman: What is Pythonn',
+                '\nHuman: What is Python',
                 '\nAI: Python is a high-level, versatile, and widely used programming language, Yes']
             # while True:
             #     user_input: str = input('You: ')
             response: str = get_reponse(message, prompt_list)
             print(f"Bot: {response}")
-            await self.send_script_name(f'NetGeni: {response}')
+            await self.send_script_name(f'AI: {response}')
             # print('NetGeni: I don\'t have the script, shall I learn from you?')
             new_answer: str = message
             if message.lower() != 'ask':
@@ -183,7 +184,7 @@ class ScriptConsumer(AsyncWebsocketConsumer):
                 #  message_str = str(self.previous_message.message)
                  knowledge_data["keywords"].append({"keyword": hello_text, "category": response})
                  save_knowledge_data('keywords.json', knowledge_data)
-                 await self.send_script_name("NetGeni: Thank you! I learned from you to help others!")
+                 await self.send_script_name("AI: Thank you! I learned from you to help others!")
 
         
         # await self.send(json.dumps({

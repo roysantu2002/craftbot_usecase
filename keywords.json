@@ -1,194 +1,347 @@
 {
-  "keywords": [
-    {
-      "id": 1,
-      "keyword": "Backup",
-      "category": "Data Management"
-    },
-    {
-      "id": 2,
-      "keyword": "Log Analysis",
-      "category": "Monitoring"
-    },
-    {
-      "id": 3,
-      "keyword": "Data Cleanup",
-      "category": "Data Management"
-    },
-    {
-      "id": 4,
-      "keyword": "Email",
-      "category": "Communication"
-    },
-    {
-      "id": 5,
-      "keyword": "Report Generation",
-      "category": "Reporting"
-    },
-    {
-      "id": 6,
-      "keyword": "Server Monitoring",
-      "category": "Monitoring"
-    },
-    {
-      "id": 7,
-      "keyword": "Data Import",
-      "category": "Data Management"
-    },
-    {
-      "id": 8,
-      "keyword": "Authentication",
-      "category": "Security"
-    },
-    {
-      "id": 9,
-      "keyword": "Data Export",
-      "category": "Data Management"
-    },
-    {
-      "id": 10,
-      "keyword": "File Archiving",
-      "category": "Data Management"
-    },
-    {
-      "keyword": "\"{\\\"message\\\":\\\"Hello\\\"}\"",
-      "category": "Hello"
-    },
-    {
-      "keyword": "\"{\\\"message\\\":\\\"Hi there\\\"}\"",
-      "category": "Hi there"
-    },
-    {
-      "keyword": "\"{\\\"message\\\":\\\"hello\\\"}\"",
-      "category": "hello"
-    },
-    {
-      "keyword": "Hello",
-      "category": "Hello"
-    },
-    {
-      "keyword": "Hi",
-      "category": "Hi"
-    },
-    {
-      "keyword": "How are you doing",
-      "category": "How are you doing"
-    },
-    {
-      "keyword": "backup scripts",
-      "category": "backup scripts"
-    },
-    {
-      "keyword": "Text",
-      "category": "Text"
-    },
-    {
-      "keyword": "network",
-      "category": "network"
-    },
-    {
-      "keyword": "management",
-      "category": "management"
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "",
-      "category": ""
-    },
-    {
-      "keyword": "test",
-      "category": "test"
-    },
-    {
-      "keyword": "do you have database script",
-      "category": "do you have database script"
-    },
-    {
-      "keyword": "database",
-      "category": "database"
-    },
-    {
-      "keyword": "python",
-      "category": "python"
-    },
-    {
-      "keyword": "ansible",
-      "category": "ansible"
-    },
-    {
-      "keyword": "ansible scripting",
-      "category": "ansible scripting"
-    },
-    {
-      "keyword": "java",
-      "category": "java"
-    },
-    {
-      "keyword": "blockchain",
-      "category": "blockchain"
-    },
-    {
-      "keyword": "how about network scripts",
-      "category": "how about network scripts"
-    },
-    {
-      "keyword": "unix",
-      "category": "unix"
-    },
-    {
-      "keyword": "do you now ai",
-      "category": "do you now ai"
-    },
-    {
-      "keyword": "mongodb",
-      "category": "mongodb"
-    },
-    {
-      "keyword": "python command for disk space",
-      "category": "python command for disk space"
-    },
-    {
-      "keyword": "How to check cpu usage",
-      "category": "You can use the psutil library to check the CPU usage of your Python program."
-    },
-    {
-      "keyword": "do you understand python coding",
-      "category": "Yes, I understand Python coding."
-    },
-    {
-      "keyword": "give me a command to check cpu usage using paramiko",
-      "category": "The command to check CPU usage using Paramiko is \"top -n 1 | grep Cpu:\"."
-    },
-    {
-      "keyword": "how to print Hello World in Python",
-      "category": "To print \"Hello World\" in Python, you can use the print() function like this: print(\"Hello World\")"
-    },
-    {
-      "keyword": "how to find interfaces usage using paramiko give me a command",
-      "category": "You can use the Paramiko exec_command() method to find the interface usage. The command you can use is \"netstat -i\"."
-    },
-    {
-      "keyword": "give me a basic python commands",
-      "category": "\nAI:Some basic Python commands include print(), input(), set(), len(), for loop, if-else statements, and while loop."
-    }
-  ]
+    "keywords": [
+        {
+            "id": 1,
+            "keyword": "Backup",
+            "category": "Data Management"
+        },
+        {
+            "id": 2,
+            "keyword": "Log Analysis",
+            "category": "Monitoring"
+        },
+        {
+            "id": 3,
+            "keyword": "Data Cleanup",
+            "category": "Data Management"
+        },
+        {
+            "id": 4,
+            "keyword": "Email",
+            "category": "Communication"
+        },
+        {
+            "id": 5,
+            "keyword": "Report Generation",
+            "category": "Reporting"
+        },
+        {
+            "id": 6,
+            "keyword": "Server Monitoring",
+            "category": "Monitoring"
+        },
+        {
+            "id": 7,
+            "keyword": "Data Import",
+            "category": "Data Management"
+        },
+        {
+            "id": 8,
+            "keyword": "Authentication",
+            "category": "Security"
+        },
+        {
+            "id": 9,
+            "keyword": "Data Export",
+            "category": "Data Management"
+        },
+        {
+            "id": 10,
+            "keyword": "File Archiving",
+            "category": "Data Management"
+        },
+        {
+            "keyword": "\"{\\\"message\\\":\\\"Hello\\\"}\"",
+            "category": "Hello"
+        },
+        {
+            "keyword": "\"{\\\"message\\\":\\\"Hi there\\\"}\"",
+            "category": "Hi there"
+        },
+        {
+            "keyword": "\"{\\\"message\\\":\\\"hello\\\"}\"",
+            "category": "hello"
+        },
+        {
+            "keyword": "Hello",
+            "category": "Hello"
+        },
+        {
+            "keyword": "Hi",
+            "category": "Hi"
+        },
+        {
+            "keyword": "How are you doing",
+            "category": "How are you doing"
+        },
+        {
+            "keyword": "backup scripts",
+            "category": "backup scripts"
+        },
+        {
+            "keyword": "Text",
+            "category": "Text"
+        },
+        {
+            "keyword": "network",
+            "category": "network"
+        },
+        {
+            "keyword": "management",
+            "category": "management"
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "",
+            "category": ""
+        },
+        {
+            "keyword": "test",
+            "category": "test"
+        },
+        {
+            "keyword": "do you have database script",
+            "category": "do you have database script"
+        },
+        {
+            "keyword": "database",
+            "category": "database"
+        },
+        {
+            "keyword": "python",
+            "category": "python"
+        },
+        {
+            "keyword": "ansible",
+            "category": "ansible"
+        },
+        {
+            "keyword": "ansible scripting",
+            "category": "ansible scripting"
+        },
+        {
+            "keyword": "java",
+            "category": "java"
+        },
+        {
+            "keyword": "blockchain",
+            "category": "blockchain"
+        },
+        {
+            "keyword": "how about network scripts",
+            "category": "how about network scripts"
+        },
+        {
+            "keyword": "unix",
+            "category": "unix"
+        },
+        {
+            "keyword": "do you now ai",
+            "category": "do you now ai"
+        },
+        {
+            "keyword": "mongodb",
+            "category": "mongodb"
+        },
+        {
+            "keyword": "python command for disk space",
+            "category": "python command for disk space"
+        },
+        {
+            "keyword": "How to check cpu usage",
+            "category": "You can use the psutil library to check the CPU usage of your Python program."
+        },
+        {
+            "keyword": "do you understand python coding",
+            "category": "Yes, I understand Python coding."
+        },
+        {
+            "keyword": "give me a command to check cpu usage using paramiko",
+            "category": "The command to check CPU usage using Paramiko is \"top -n 1 | grep Cpu:\"."
+        },
+        {
+            "keyword": "how to print Hello World in Python",
+            "category": "To print \"Hello World\" in Python, you can use the print() function like this: print(\"Hello World\")"
+        },
+        {
+            "keyword": "how to find interfaces usage using paramiko give me a command",
+            "category": "You can use the Paramiko exec_command() method to find the interface usage. The command you can use is \"netstat -i\"."
+        },
+        {
+            "keyword": "give me a basic python commands",
+            "category": "\nAI:Some basic Python commands include print(), input(), set(), len(), for loop, if-else statements, and while loop."
+        },
+        {
+            "keyword": "alldone, all, all",
+            "category": "Okay, all done."
+        },
+        {
+            "keyword": "simple python code",
+            "category": "Sure, here is an example of a simple Python code: \n\nnum = 5\nif num > 0:\n   print(\"Positive number\")"
+        },
+        {
+            "keyword": "do you know about paramiko basic commands",
+            "category": "Yes, I know the basic commands of paramiko, a Python-based SSH library."
+        },
+        {
+            "keyword": "give me a basic command to get list of ip addresses",
+            "category": "You can use the \u201cipconfig\u201d command to view a list of your IP addresses."
+        },
+        {
+            "id": 10,
+            "keyword": "File Archiving",
+            "category": "File Archiving"
+        },
+        {
+            "keyword": "do you know how to write a basic python code to print \"Hi\"",
+            "category": "Yes, the code to print \"Hi\" in Python would be:\n\nprint(\"Hi\")"
+        },
+        {
+            "keyword": "router and switches how to debug using python paramiko",
+            "category": "Yes, you can debug using Python paramiko. Paramiko is a library for Python that implements the SSH2 protocol for secure connections to remote machines. It provides support for authenticating and executing commands on remote machines, as well as transferring files over secure connections."
+        },
+        {
+            "keyword": "give me some python paramiko commands to debug netwrok swiches",
+            "category": "To debug network switches using paramiko, you can use the following commands:\n\n1.  Paramiko.SSHClient().connect() - Establishes a connection to the switch.\n2.  Paramiko.SFTPClient.put() - Uploads files to the switch.\n3.  Paramiko.SFTPClient.get() - Downloads files from the switch.\n4.  Paramiko.exec_command() - Executes commands on the switch.\n5.  Paramiko.SFTPClient.close() - Closes the connection with the switch.\nYes"
+        },
+        {
+            "keyword": "python command to get the health status of a machine",
+            "category": "The command to get the health status of a machine in Python is \"psutil.cpu_times()\" or \"psutil.cpu_percent()\"."
+        },
+        {
+            "keyword": "do you have more command",
+            "category": "Yes, I am experienced with Python and have developed applications using the language."
+        },
+        {
+            "keyword": "how to get all the ip addresses of a router",
+            "category": "To get all the IP addresses of a router, you can use the ipconfig command on a Windows system or the ifconfig command on a Linux system. Yes"
+        },
+        {
+            "keyword": "spanning tree command in python",
+            "category": "The spanning tree command in Python is a set of instructions used to create a layout of connected nodes from a given set of data."
+        },
+        {
+            "keyword": "done, get_disk_space, 192.168.1.100",
+            "category": "I'm sorry, I don't understand."
+        },
+        {
+            "keyword": "how to connect to a device using ssh and paramiko",
+            "category": "To connect to a device using SSH and Paramiko, you would need to first import the Paramiko library and then use the SSHClient object to establish a connection to the device. You will also need the username and password of the device. Once you have established the connection, you can then execute commands on the device through the Paramiko library. Yes"
+        },
+        {
+            "keyword": "give me a command to perform network interface list in a router",
+            "category": "The command you need to perform a network interface list in a router is \"show ip interface brief\"."
+        },
+        {
+            "keyword": "what is paramiko",
+            "category": "Paramiko is a Python library used for secure SSH connections, Yes."
+        },
+        {
+            "keyword": "how to use paramiko to connect to a router",
+            "category": "Paramiko is a Python (2.6, 2.7, 3.2+) implementation of the SSHv2 protocol, providing both client and server functionality. You can use Paramiko to connect to your router by setting up an SSH connection using the Paramiko library. Once you have the connection established, you can use it to issue commands and receive output from the router. Yes"
+        },
+        {
+            "keyword": "a few simple commands in paramiko module",
+            "category": "Sure, the paramiko module allows you to execute commands locally or remotely over an SSH session. Some simple examples are connecting to a remote server, transferring files, or executing commands on the remote system. Yes."
+        },
+        {
+            "keyword": "can u share me a few basic sample of python coding",
+            "category": "Yes, Python can be used for a variety of tasks such as web development, scripting, data analysis, or creating GUI programs. As an example here is some basic code to print \"Hello World\" in Python: \n\nprint(\"Hello World!\")"
+        },
+        {
+            "keyword": "do understand ssh to a netwok switch",
+            "category": "\nAI:No, I do not."
+        },
+        {
+            "keyword": "start, hsrp_script, 192.168.1.23",
+            "category": "No, I'm unable to answer that question as it is not related to Python development"
+        },
+        {
+            "keyword": "stop",
+            "category": "Ok, stopping."
+        },
+        {
+            "keyword": "executing, interface_script, 172.17.75.248",
+            "category": "I'm sorry, that is not a question."
+        },
+        {
+            "keyword": "executing, log_analysis, 192.168.1.23",
+            "category": "Python can be used to execute code, perform log analysis, and store the IP address 192.168.1.23."
+        },
+        {
+            "keyword": "can u help me with some problem solving for a router - please!",
+            "category": "Yes, I can help you with problem solving for a router. What type of router is it?"
+        },
+        {
+            "keyword": "some basic router trouble shooting commands using paramiko",
+            "category": "paramiko is a Python library used for SSH connection. It provides several commands such as ssh-keygen, scp, sftp, ssh-agent, ssh-add, ssh, etc., which can be used for troubleshooting router issues."
+        },
+        {
+            "keyword": "start, spanning_tree, 172.17.75.248",
+            "category": "Sorry, I'm not sure what you are asking. Could you please elaborate?"
+        },
+        {
+            "keyword": "done, interface_counter_error, 192.168.1.23",
+            "category": "I'm sorry, I don't understand what you are asking."
+        },
+        {
+            "keyword": "done, bgp_summary, 172.17.75.248",
+            "category": "I'm sorry, I don't understand what you mean."
+        },
+        {
+            "keyword": "Need some help with python programming for network devices",
+            "category": "Yes, I can help you with Python programming for network devices."
+        },
+        {
+            "keyword": "How to manage network outage using python",
+            "category": "You can manage network outage using Python by writing scripts to automate the process of troubleshooting and resolving the issue."
+        },
+        {
+            "keyword": "Can u suggest something how to manage network connectivity with the devices using paramiko",
+            "category": "Yes, you can use the paramiko library to connect to and manage network devices in Python."
+        },
+        {
+            "keyword": "Give me some specific commands using python and paramiko",
+            "category": "Here are some specific command examples using Python and Paramiko: \n\u2022 Create an SSH client instance with Paramiko \u2013 ssh = paramiko.SSHClient()\n\u2022 Connect to a remote host using SSH \u2013 ssh.connect(hostname, port, username, password)\n\u2022 Execute a command on a remote host \u2013 stdin, stdout, stderr = ssh.exec_command('command')\n\u2022 Download a file from a remote host \u2013 sftp.get('remotefile.txt', 'localfile.txt')\n\u2022 Upload a file to a remote host \u2013 sftp.put('localfile.txt', 'remotefile.txt')\n"
+        },
+        {
+            "keyword": "can I ask python questions",
+            "category": "Yes, you can ask Python questions."
+        },
+        {
+            "keyword": "can u teach python",
+            "category": "Yes, I can teach you Python."
+        },
+        {
+            "keyword": "I'm a network engineer, I found some issues with a router, could you help me share a few python commands to connect to the device - please",
+            "category": "Yes, of course I can help. To connect to the device with Python, you can use the Paramiko library. Here are a few examples of commands you can use: \nssh = paramiko.SSHClient() \nssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()) \nssh.connect(hostname, username=username, password=password) \nstdin, stdout, stderr = ssh.exec_command('ls -l')"
+        },
+        {
+            "keyword": "Paramiko router connection",
+            "category": "Paramiko is a Python library used to provide an interface for SSH connections, Yes"
+        },
+        {
+            "keyword": "I am facing some issues with my vm and would like to perform some connection test.",
+            "category": "It sounds like you need to troubleshoot your virtual machine. Can I assist you with that?"
+        }
+    ]
 }

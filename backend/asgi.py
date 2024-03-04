@@ -7,7 +7,7 @@ from scripts.consumers import ScriptConsumer
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 # Define a list of allowed channel names
-allowed_channels = ["scripts", "booking", "writing"]
+allowed_channels = ["scripts", "booking", "writing", "python"]
 
 # WSGI application
 wsgi_application = get_asgi_application()
