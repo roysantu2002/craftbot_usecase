@@ -1,0 +1,41 @@
+
+---
+- name: Process Use Case
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Extracting information from input
+      set_fact:
+        id: '18'
+        id: '18'
+        name: 'Database Provisioning'
+        use_case_id: '736151'
+        status: 'pending'
+        domain: 'Database Management'
+        db_name: 're'
+        db_engine: 'er'
+        db_user: 're'
+        question_0_What is the name of the database you want to create?: 'er'
+        question_1_Which database engine would you like to use?: 'rer'
+        question_2_Provide a username for the database.: 'er'
+        question_3_Do you want to set a password for the database user?: 'ergrtg'
+
+    - name: Add TODO comments based on values
+      debug:
+        msg: |
+          TODO:
+          - id: { id }
+          - id: { id }
+          - name: { name }
+          - use_case_id: { use_case_id }
+          - status: { status }
+          - domain: { domain }
+          - db_name: { db_name }
+          - db_engine: { db_engine }
+          - db_user: { db_user }
+          - question_0_What is the name of the database you want to create?: { question_0_What is the name of the database you want to create? }
+          - question_1_Which database engine would you like to use?: { question_1_Which database engine would you like to use? }
+          - question_2_Provide a username for the database.: { question_2_Provide a username for the database. }
+          - question_3_Do you want to set a password for the database user?: { question_3_Do you want to set a password for the database user? }
+
