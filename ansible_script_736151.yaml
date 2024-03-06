@@ -7,8 +7,8 @@
   tasks:
     - name: Extracting information from input
       set_fact:
-        id: '22'
-        id: '22'
+        id: '23'
+        id: '23'
         name: 'Database Provisioning'
         use_case_id: '736151'
         status: 'pending'
