@@ -54,7 +54,6 @@ def api_response(prompt: str) -> Optional[str]:
         # frequency_penalty=0,
         # presence_penalty=0.6,
         stop=[' Human:', ' AI:'])
-
         return {
             "generated_text": response.choices[0],
             "text": response.choices[0].text
@@ -134,10 +133,10 @@ def get_reponse(message: str, pl: list[str]) -> str:
     return bot_response
 
 
-prompt_list: list[str] = ['You be become a Python developer that you would respond with "Yes"',
-                '\nHuman: What is Python',
-                '\nAI: Python is a high-level, versatile, and widely used programming language, Yes']
-            # while True:
-            #     user_input: str = input('You: ')
-response: str = get_reponse("Simple hello world program", prompt_list)
-print(f"Bot: {response}")
+# prompt_list: list[str] = ['You be become a Python developer that you would respond with "Yes"',
+#                 '\nHuman: What is Python',
+#                 '\nAI: Python is a high-level, versatile, and widely used programming language, Yes']
+#             # while True:
+#             #     user_input: str = input('You: ')
+# response: str = get_reponse("Simple hello world program", prompt_list)
+# print(f"Bot: {response}")

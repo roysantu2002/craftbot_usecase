@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import KeywordsListView, NetworkKeywordCreateView, ScriptInfoListView, ScriptInfoCreateView, ExecuteScriptView,  NetworkDeviceLogListCreateAPIView, NetworkDeviceLogRetrieveAPIView, NetworkDeviceInfoCreateAPIView, NetworkDeviceInfoListView, NetworkDeviceInfoDetailView, NetworkDeviceLogCreateAPIView
+from .views import UseCaseListCreateView, KeywordsListView, NetworkKeywordCreateView, ScriptInfoListView, ScriptInfoCreateView, ExecuteScriptView,  NetworkDeviceLogListCreateAPIView, NetworkDeviceLogRetrieveAPIView, NetworkDeviceInfoCreateAPIView, NetworkDeviceInfoListView, NetworkDeviceInfoDetailView, NetworkDeviceLogCreateAPIView
 
 urlpatterns = [
+    path('use-cases/', UseCaseListCreateView.as_view(), name='use-case-list-create'),
     path('network-devices/', NetworkDeviceInfoCreateAPIView.as_view(), name='network-device-create'),
     path('network-devices/list/', NetworkDeviceInfoListView.as_view(), name='network-device-list'),
     path('network-devices/<int:pk>/', NetworkDeviceInfoDetailView.as_view(), name='network-device-detail'),

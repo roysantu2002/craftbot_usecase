@@ -1,0 +1,41 @@
+
+---
+- name: Process Use Case
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Extracting information from input
+      set_fact:
+        id: '11'
+        id: '11'
+        name: 'Database Backup and Restoration'
+        use_case_id: '939290'
+        status: 'pending'
+        domain: 'Database Management'
+        backup_name: 'Database'
+        backup_type: 'Database'
+        restore_point: 'Database'
+        question_0_What should be the name of the backup?: 'Database'
+        question_1_Do you want to perform a full or incremental backup?: 'Database'
+        question_2_Provide a timestamp or label for the restore point.: 'Database'
+        question_3_Should the backup files be compressed?: 'Database'
+
+    - name: Add TODO comments based on values
+      debug:
+        msg: |
+          TODO:
+          - id: { id }
+          - id: { id }
+          - name: { name }
+          - use_case_id: { use_case_id }
+          - status: { status }
+          - domain: { domain }
+          - backup_name: { backup_name }
+          - backup_type: { backup_type }
+          - restore_point: { restore_point }
+          - question_0_What should be the name of the backup?: { question_0_What should be the name of the backup? }
+          - question_1_Do you want to perform a full or incremental backup?: { question_1_Do you want to perform a full or incremental backup? }
+          - question_2_Provide a timestamp or label for the restore point.: { question_2_Provide a timestamp or label for the restore point. }
+          - question_3_Should the backup files be compressed?: { question_3_Should the backup files be compressed? }
+

@@ -14,7 +14,49 @@ from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 from .serializers import NetworkKeywordSerializer
 from .models import NetworkKeyword
+from .generate_script import generate_ansible_script
+from .models import UseCase
+from .serializers import UseCaseSerializer
 
+# class UseCaseListCreateView(generics.ListCreateAPIView):
+#     queryset = UseCase.objects.all()
+#     serializer_class = UseCaseSerializer
+
+# class UseCaseListCreateView(generics.ListCreateAPIView):
+#     queryset = UseCase.objects.all()
+#     serializer_class = UseCaseSerializer
+
+#     def perform_create(self, serializer):
+#         # Save the instance and generate Ansible script
+#         instance = serializer.save()
+#         print(serializer.data)
+#         generate_ansible_script(serializer.data)
+
+#         return instance
+
+#     def post(self, request, *args, **kwargs):
+
+#         serializer = self.get_serializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         self.perform_create(serializer)
+
+#         headers = self.get_success_headers(serializer.data)
+#         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+    
+class UseCaseListCreateView(APIView):
+    def get(self, request, *args, **kwargs):
+        queryset = UseCase.objects.all()
+        serializer = UseCaseSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def post(self, request, *args, **kwargs):
+        serializer = UseCaseSerializer(data=request.data)
+        if serializer.is_valid():
+            instance = serializer.save()
+            generate_ansible_script(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
 class NetworkKeywordCreateView(APIView):
     serializer_class = NetworkKeywordSerializer
     def post(self, request, format=None):

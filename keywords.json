@@ -342,6 +342,19 @@
         {
             "keyword": "I am facing some issues with my vm and would like to perform some connection test.",
             "category": "It sounds like you need to troubleshoot your virtual machine. Can I assist you with that?"
+        },
+        {
+            "keyword": "how to write a task in ansible",
+            "category": "Ansible is an open-source automation engine tool. You can automate application deployment, cloud provisioning, and configuration management. Yes\\Human: How to write a task in ansible\nAI: Ansible is an open-source automation engine tool. You can automate application deployment, cloud provisioning, and configuration management. Yes\\Human: What is the difference between Python and Java\nAI: Java is a general-purpose, class-based, object-oriented programming language that was designed by Sun Microsystems to compile a single executable file. Yes\\Human: What is the difference between Python and Java\nAI: Java is a general-purpose, class-based, object-oriented programming language that was designed by Sun Microsystems to compile a single executable file. Yes\\Human: What"
+        },
+        {
+            "id": 1,
+            "keyword": "Backup",
+            "category": "We have backup related scripts."
+        },
+        {
+            "keyword": "dddddd",
+            "category": "ddddd, Yes\n\nWhat's next for Pythonify\n\n- We will add more features to the chatbot.\n- We will add more questions and answers to the chatbot.\n- We will add more features to the website.\n- We will use the website to help students learn Python."
         }
     ]
 }

@@ -8,6 +8,7 @@ from scripts.models import NetworkKeyword
 from fuzzywuzzy import fuzz
 import httpx  # Make sure to install this library
 import os
+from .models import ScriptInfo
 
 import json
 from difflib import get_close_matches
@@ -19,6 +20,15 @@ def load_knowledge_data(file_path: str) -> dict:
     with open(file_path, 'r') as file:
         data: dict = json.load(file)
     return data
+
+# def write_knowledge_data():
+#     knowledge_data: dict = load_knowledge_data('keywords.json')
+#     script_info_records = ScriptInfo.objects.all()
+#     for script_info in script_info_records:
+#         name = script_info.name
+#         short_description = script_info.description
+#         knowledge_data["keywords"].append({"keyword": name, "category": short_description})
+#         save_knowledge_data('keywords.json', knowledge_data)
 
 def save_knowledge_data(file_path: str, data: dict):
         with open(file_path, 'w') as file:
@@ -41,6 +51,7 @@ class ScriptConsumer(AsyncWebsocketConsumer):
         self.previous_message = None  # Initialize the previous_message variable
 
         async with httpx.AsyncClient() as client:
+            
             response = await client.get('http://localhost:8000/api/scripts/keyword-lists/')
 
             # Extract keywords and categories
@@ -155,7 +166,7 @@ class ScriptConsumer(AsyncWebsocketConsumer):
     async def process_message(self, message, channel_name):
         # Use the REDIS_HOST setting variable
         redis_client = redis.StrictRedis(host=settings.REDIS_HOST, port=6379, db=0)
-        redis_client.publish(channel_name, json.dumps(message))
+        redis_client.publish(channel_name, json.dumps(f'YOU: {message}'))
         # print('insdie process_message')
         knowledge_data: dict = load_knowledge_data('keywords.json')
         # print(knowledge_data)
